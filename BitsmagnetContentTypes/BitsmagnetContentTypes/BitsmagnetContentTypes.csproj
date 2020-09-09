@@ -24,7 +24,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Content Types\" />
+    <None Remove="Content Types\Contents1.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="Content Types\Contents1.ts" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
